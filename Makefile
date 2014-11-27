@@ -1,12 +1,13 @@
 PROGS=window_size inlinetest
+COMPILECMD=g++ -w -Wall -ggdb $< -o $@
 
 all: $(PROGS)
 
 window_size: window_size.cpp
-	g++ -w -Wall -ggdb $< -o $@
+	$(COMPILECMD)
 
 inlinetest: inlinetest.cpp
-	g++ -Wall -ggdb $< -o $@
+	$(COMPILECMD)
 
 clean:
 	rm -f $(PROGS)
