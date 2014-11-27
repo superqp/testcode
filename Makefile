@@ -1,4 +1,4 @@
-PROGS=window_size inlinetest on_exit charrange
+PROGS=window_size inlinetest on_exit charrange arraryaddress
 COMPILECMD=g++ -w -Wall -ggdb $< -o $@
 
 all: $(PROGS)
@@ -13,6 +13,9 @@ on_exit: on_exit.cpp
 	$(COMPILECMD)
 
 charrange: charrange.cpp
+	$(COMPILECMD)
+
+arraryaddress: arraryaddress.cpp
 	$(COMPILECMD)
 
 clean:
