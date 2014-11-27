@@ -13,6 +13,6 @@ int main()
     // Last in first out.
     on_exit(fun, (void *)"First.");
     on_exit(fun, (void *)"Second.");
-    return 1;
+    exit(1);//return 1;
 }
 
