@@ -1,4 +1,4 @@
-PROGS=window_size inlinetest on_exit charrange arraryaddress
+PROGS=window_size inlinetest on_exit charrange arraryaddress stringReverse
 COMPILECMD=g++ -w -Wall -ggdb $< -o $@
 
 all: $(PROGS)
@@ -16,6 +16,9 @@ charrange: charrange.cpp
 	$(COMPILECMD)
 
 arraryaddress: arraryaddress.cpp
+	$(COMPILECMD)
+
+stringReverse: stringReverse.cpp
 	$(COMPILECMD)
 
 clean:
