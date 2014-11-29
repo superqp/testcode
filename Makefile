@@ -1,4 +1,4 @@
-PROGS=window_size inlinetest on_exit charrange arraryaddress stringReverse stringUpper
+PROGS=window_size inlinetest on_exit charrange arraryaddress stringReverse stringUpper copyConstructorAndAssignment
 COMPILECMD=g++ -w -Wall -ggdb $< -o $@
 
 all: $(PROGS)
@@ -22,6 +22,9 @@ stringReverse: stringReverse.cpp
 	$(COMPILECMD)
 
 stringUpper: stringUpper.cpp
+	$(COMPILECMD)
+
+copyConstructorAndAssignment: copyConstructorAndAssignment.cpp
 	$(COMPILECMD)
 
 clean:
